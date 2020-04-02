@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="博客">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;index.html">
+<meta property="og:site_name" content="博客">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Hao">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 4.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">博客</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-ramda-study" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/04/02/ramda-study/" class="article-date">
+  <time class="dt-published" datetime="2020-04-02T03:01:39.000Z" itemprop="datePublished">2020-04-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2020/04/02/ramda-study/">几个ramda方法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="compose"><a href="#compose" class="headerlink" title="compose"></a>compose</h2><p>从右往左执行函数组合（右侧函数的输出作为左侧函数的输入）。最后一个函数可以是任意元函数（参数个数不限），其余函数必须是一元函数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">R.compose(<span class="built_in">Math</span>.abs, R.add(<span class="number">1</span>), R.multiply(<span class="number">2</span>))(<span class="number">-4</span>) <span class="comment">//=&gt; 7</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="prop"><a href="#prop" class="headerlink" title="prop"></a>prop</h2><p>取出对象中指定属性的值。如果不存在，则返回 undefined。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">R.prop(<span class="string">'x'</span>, &#123;<span class="attr">x</span>: <span class="number">100</span>&#125;); <span class="comment">//=&gt; 100</span></span><br><span class="line">R.prop(<span class="string">'x'</span>, &#123;&#125;); <span class="comment">//=&gt; undefined</span></span><br><span class="line">R.prop(<span class="number">0</span>, [<span class="number">100</span>]); <span class="comment">//=&gt; 100</span></span><br><span class="line">R.compose(R.inc, R.prop(<span class="string">'x'</span>))(&#123; <span class="attr">x</span>: <span class="number">3</span> &#125;) <span class="comment">//=&gt; 4</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/04/02/ramda-study/" data-id="ck8i7glij000f8gus15vx359j" data-title="几个ramda方法" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-wechat-applet-code-review" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/01/09/wechat-applet-code-review/" class="article-date">
+  <time class="dt-published" datetime="2020-01-09T11:51:55.000Z" itemprop="datePublished">2020-01-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2020/01/09/wechat-applet-code-review/">代码发布审核未通过,请你完善内容审核机制</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>小程序代码发布审核未通过，原因如下：<br>1:小程序内容不符合规则:<br>(1):为避免您的小程序被滥用，请你完善内容审核机制，如调用小程序内容安全API，或使用其他技术、人工审核手段，过滤色情、违法等有害信息，保障发布内容的安全。<br>请根据上述原因对小程序进行修改，并重新提交代码审核。</p>
+<h2 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h2><p>针对不符合的内容进行了改善，引入了小程序内容安全API msgSecCheck。<br>为了调用这个API，在小程序中加入了云开发，创建了两个云函数。<br>一个用来获得 <strong>access_token</strong>,代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> cloud = <span class="built_in">require</span>(<span class="string">'wx-server-sdk'</span>)</span><br><span class="line"><span class="keyword">const</span> request = <span class="built_in">require</span>(<span class="string">'request'</span>)</span><br><span class="line"></span><br><span class="line">cloud.init()</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> appid = <span class="string">'你的appid'</span></span><br><span class="line"><span class="keyword">var</span> appsecret = <span class="string">'你的appsecret'</span></span><br><span class="line"><span class="keyword">let</span> token_url = <span class="string">'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&amp;appid='</span> + appid + <span class="string">'&amp;secret='</span> + appsecret</span><br><span class="line"><span class="comment">// 云函数入口函数</span></span><br><span class="line">exports.main = <span class="keyword">async</span> (event, context) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> rp = <span class="function"><span class="params">options</span> =&gt;</span></span><br><span class="line">    <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">      request(options, (error, response, body) =&gt; &#123;</span><br><span class="line">        <span class="keyword">if</span> (error) &#123;</span><br><span class="line">          reject(error);</span><br><span class="line">        &#125;</span><br><span class="line">        resolve(response);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">  <span class="keyword">const</span> result = <span class="keyword">await</span> rp(&#123;</span><br><span class="line">    url: token_url,</span><br><span class="line">    method: <span class="string">'GET'</span></span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="keyword">return</span> (<span class="keyword">typeof</span> result.body === <span class="string">'object'</span>) ? result.body : <span class="built_in">JSON</span>.parse(result.body);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>一个用来调用<strong>msgSecCheck</strong>,代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 云函数入口文件</span></span><br><span class="line"><span class="keyword">const</span> cloud = <span class="built_in">require</span>(<span class="string">'wx-server-sdk'</span>)</span><br><span class="line"><span class="keyword">const</span> request = <span class="built_in">require</span>(<span class="string">'request'</span>)</span><br><span class="line"></span><br><span class="line">cloud.init()</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> checkUrl = <span class="string">'https://api.weixin.qq.com/wxa/msg_sec_check'</span> </span><br><span class="line"><span class="comment">// 云函数入口函数</span></span><br><span class="line">exports.main = <span class="keyword">async</span> (event, context) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> rp = <span class="function"><span class="params">options</span> =&gt;</span></span><br><span class="line">    <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">      request(options, (error, response, body) =&gt; &#123;</span><br><span class="line">        <span class="keyword">if</span> (error) &#123;</span><br><span class="line">          reject(error);</span><br><span class="line">        &#125;</span><br><span class="line">        resolve(response);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">  <span class="keyword">const</span> resultTwo = <span class="keyword">await</span> rp(&#123;</span><br><span class="line">    url: checkUrl + <span class="string">'?access_token='</span> + event.access_token,</span><br><span class="line">    method: <span class="string">'POST'</span>,</span><br><span class="line">    body: <span class="built_in">JSON</span>.stringify(&#123;<span class="attr">content</span>: event.text&#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="keyword">return</span> (<span class="keyword">typeof</span> resultTwo.body === <span class="string">'object'</span>) ? resultTwo.body : <span class="built_in">JSON</span>.parse(resultTwo.body);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>有个坑点就是access_token是拼接在请求路径上的，需要注意一下。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/01/09/wechat-applet-code-review/" data-id="ck8i7gli000038gus2hlxdwt4" data-title="代码发布审核未通过,请你完善内容审核机制" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wechat/" rel="tag">wechat</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AE%A1%E6%A0%B8/" rel="tag">审核</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" rel="tag">小程序</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-css-unit" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/01/04/css-unit/" class="article-date">
+  <time class="dt-published" datetime="2020-01-04T06:57:55.000Z" itemprop="datePublished">2020-01-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2020/01/04/css-unit/">vw、vh布局部分手机浏览器弹出软键盘导致的样式问题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>最近写了一个移动端H5注册页面，vw、vh 优势在于能够直接获取高度，可以很好的适应不同尺寸大小的屏幕，<br>但是在真机调试的时候遇到了部分手机浏览器弹出软键盘导致的样式问题。</p>
+<h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><p>苹果手机软键盘是叠在可视窗口上面的，也就是不影响可视窗口的大小。但是在安卓，软键盘是在窗口中，即占用窗口的面积。</p>
+<h2 id="解决方法1"><a href="#解决方法1" class="headerlink" title="解决方法1"></a>解决方法1</h2><p>监听软键盘弹出前后浏览器的大小，当浏览器大小改变保持body的大小不变</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> clientHeight = <span class="built_in">document</span>.documentElement.clientHeight || <span class="built_in">document</span>.body.clientHeight;</span><br><span class="line"><span class="built_in">window</span>.onresize = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> nowClientHeight = <span class="built_in">document</span>.documentElement.clientHeight || <span class="built_in">document</span>.body.clientHeight;</span><br><span class="line">    <span class="keyword">if</span> (clientHeight &gt; nowClientHeight) &#123;</span><br><span class="line">        <span class="comment">//键盘弹出的事件处理</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">//键盘收起的事件处理</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="解决方法2"><a href="#解决方法2" class="headerlink" title="解决方法2"></a>解决方法2</h2><p>在csdn看到一个更好的解决方法。<br>给viewport设置height值，可用window.innerHeight赋值。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=<span class="string">"viewport"</span> id=<span class="string">"viewportMeta"</span>&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> initViewport = <span class="function"><span class="keyword">function</span>(<span class="params">height</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> metaEl = <span class="built_in">document</span>.querySelector(<span class="string">"#viewportMeta"</span>);</span><br><span class="line">	<span class="keyword">var</span> content = <span class="string">"height="</span> + height + <span class="string">",width=device-width,initial-scale=1.0,user-scalable=no"</span>;</span><br><span class="line">	metaEl.setAttribute(<span class="string">'name'</span>, <span class="string">'viewport'</span>);</span><br><span class="line">	metaEl.setAttribute(<span class="string">'content'</span>, content);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> realHeight = <span class="built_in">window</span>.innerWidth &gt; <span class="built_in">window</span>.innerHeight ? <span class="built_in">window</span>.innerWidth : <span class="built_in">window</span>.innerHeight</span><br><span class="line">initViewport(realHeight);</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/01/04/css-unit/" data-id="ck8i7glhw00018gus9pp57id6" data-title="vw、vh布局部分手机浏览器弹出软键盘导致的样式问题" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/unit/" rel="tag">unit</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-git-command" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/12/18/git-command/" class="article-date">
+  <time class="dt-published" datetime="2019-12-18T11:13:32.000Z" itemprop="datePublished">2019-12-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2019/12/18/git-command/">工作中常遇到的场景git命令备忘</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="场景1"><a href="#场景1" class="headerlink" title="场景1"></a>场景1</h2><p>开发中需要暂存当前分支的内容，切换到另外一个分支进行开发。<br>离开当前分支保存当前修改的内容：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"description"</span></span><br></pre></td></tr></table></figure>
+
+<p>回到当前分支撤销上次commit并保留修改的文本在工作区：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --soft HEAD^</span><br></pre></td></tr></table></figure>
+
+<h2 id="场景2"><a href="#场景2" class="headerlink" title="场景2"></a>场景2</h2><p>同时维护的两个版本出现了同一个bug，在一个分支修改后，另外一个分支也要修复当前bug，可以使用如下命令将修改的内容拷贝过来：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git cherry-pick commit-sha1</span><br></pre></td></tr></table></figure>
+
+<h2 id="场景3"><a href="#场景3" class="headerlink" title="场景3"></a>场景3</h2><p>新拉的功能分支开发完毕后需要合并到主分支，如果直接合过去就会产生很多commit，git提交记录会分叉，这时可以使用rebase命令让我们的记录看起来更清爽：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rebase &lt;branch&gt;</span><br></pre></td></tr></table></figure>
+<p>接下来按照提示操作即可</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/12/18/git-command/" data-id="ck8i7glhq00008gusa3cs8fo7" data-title="工作中常遇到的场景git命令备忘" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/" rel="tag">git</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unit/" rel="tag">unit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wechat/" rel="tag">wechat</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%A1%E6%A0%B8/" rel="tag">审核</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" rel="tag">小程序</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/unit/" style="font-size: 10px;">unit</a> <a href="/tags/wechat/" style="font-size: 10px;">wechat</a> <a href="/tags/%E5%AE%A1%E6%A0%B8/" style="font-size: 10px;">审核</a> <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" style="font-size: 10px;">小程序</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/04/02/ramda-study/">几个ramda方法</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/09/wechat-applet-code-review/">代码发布审核未通过,请你完善内容审核机制</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/04/css-unit/">vw、vh布局部分手机浏览器弹出软键盘导致的样式问题</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/18/git-command/">工作中常遇到的场景git命令备忘</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Hao<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
